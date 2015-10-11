@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+
+    <script src="/vendor/angular/angular.min.js"></script>
+    <script src="/vendor/moment/min/moment.min.js"></script>
+    <script src="/vendor/moment/min/moment-with-locales.min.js"></script>
+    <script src="/vendor/app.min.js"></script>
+
+    <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body ng-controller="MainController">
+
+<header>
+    <div class="jumbotron">
+        <h1>Today is {{currentTime | date : 'shortDate'}}</h1>
+    </div>
+</header>
+
+<div id="main">
+    <h1 class="mainHeader">You have {{totalTasks()}}.</h1>
+
+    <div class="enterTask">
+        <form id="inputForm" method="POST">
+            <input ng-model="taskName" class="taskInput" type="text" placeholder="What's on your to do list?">
+
+            <input ng-model="taskDate" class="dueDate" type="date">
+
+            <!--future category selectors-->
+            <!--<div class="taskCat">-->
+            <!--<div class="radioGroup">-->
+            <!--<input ng-model="taskHome" type="checkbox" id="taskHomeRadio">-->
+            <!--<label for="taskHomeRadio">Home</label>-->
+            <!--</div>-->
+            <!--<div class="radioGroup">-->
+            <!--<input ng-model="taskWork" type="checkbox" id="taskWorkRadio">-->
+            <!--<label for="taskWorkRadio">Work</label>-->
+            <!--</div>-->
+            <!--<div class="radioGroup">-->
+            <!--<input ng-model="taskMisc" type="checkbox" id="taskMiscRadio">-->
+            <!--<label for="taskMiscRadio">Misc</label>-->
+            <!--</div>-->
+            <!--</div>-->
+
+            <button ng-click="addTask()" class="addTaskButton" type="submit"><i class="fa fa-plus fa-3x"></i></button>
+        </form>
+    </div>
+
+    <div class="listItems">
+        <ul class="fa-ul">
+
+            <li ng-repeat="item in taskList"><i class="fa fa-chevron-right"></i><b>{{item.date | date : 'shortDate'}}</b> {{item.task}}<button class="removeButton" ng-click="delete($index)"><i class="fa fa-trash-o"></i></button></li>
+
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+#main {
+  width: 900px;
+  margin: 0 auto;
+  display: block;
+}
+
+.jumbotron {
+  text-align: center;
+  margin-bottom: 10px;
+  background-image: url("/images/taupe-abstract.jpg");
+  color: white;
+  padding: 60px 0 100px 0;
+}
+
+.mainHeader {
+  text-align: center;
+  width: 900px;
+  color: #4C4329;
+}
+
+.enterTask {
+  width: 650px;
+  margin: 0px auto;
+  display: block;
+}
+
+.removeButton {
+  -webkit-appearance: none;
+  outline: none;
+  border: 0;
+  background: transparent;
+}
+
+.addTaskButton {
+  margin: 0 auto 25px;
+  display: block;
+
+  -webkit-appearance: none;
+  outline: none;
+  border: 0;
+  background: transparent;
+}
+
+.taskInput {
+  width: 650px;
+  margin-bottom: 10px;
+}
+
+.dueDate {
+  margin: 5px auto 10px;
+  display: block;
+}
+
+.listItems {
+  width: 550px;
+  margin: 0 auto;
+  display: block;
+}
+
+.fa-trash-o {
+  color: #B6ADA5;
+  margin-left: 10px;
+}
+
+.fa-plus {
+  color: #C0974C;
+  text-align: center;
+}
+
+.fa-chevron-right {
+  color: #B6ADA5
+}
+
+li {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  font-size: 15px;
+  color: #4C4329;
+}
+
+i {
+  margin-right: 10px;
+}
+
+/*future category selectors*/
+/*.taskCat {*/
+/*width: 320px;*/
+/*margin: 0 auto;*/
+/*display: block;*/
+/*}*/
+
+/*.radioGroup {*/
+/*display: inline-block;*/
+/*text-align: center;*/
+/*margin: 5px 35px 5px 35px;*/
+/*}*/
+
+/*.taskCat label {*/
+/*display: block;*/
+/*font-weight: normal;*/
+/*}*/
